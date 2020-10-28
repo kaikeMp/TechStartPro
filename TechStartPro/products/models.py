@@ -8,9 +8,12 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-        
+
 class Product(models.Model):
     name = models.CharField(max_length=300)
     description = models.CharField(max_length=300)
     value = models.DecimalField(decimal_places=2, max_digits=6)
     category = models.ManyToManyField(Category)
+
+    def __str__(self):
+        return str([self.id, self.name, self.description, self.category])

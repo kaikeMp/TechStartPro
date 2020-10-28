@@ -1,0 +1,23 @@
+{% extends 'products/general.html' %}
+
+{% block content %}
+  <h4>Update Product</h4>
+  <div class="col l6 m8 s12">
+    <form action="{% url 'product_update' product_id %}" method='POST'>
+      {% csrf_token %}
+      <ul>
+        {{ form.as_ul }}
+      </ul>
+      <input id='product-update-btn' type="submit" value='Submit' class='btn blue darken-1'>
+    </form>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $( "#product-update-btn" ).click(function() {
+      alert('Product Updated!');
+    });
+  })
+
+  </script>
+
+{% endblock %}

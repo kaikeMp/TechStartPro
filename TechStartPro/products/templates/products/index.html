@@ -1,8 +1,112 @@
 {% extends 'products/general.html' %}
 
 {% block content %}
-<h4>Welcome Page</h4>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+<h5 id="trabalho-no-olist">Trabalho no olist</h5>
+<p>Olist é uma empresa que oferece uma plataforma de integração para vendedores e marketplaces, permitindo-lhes vender seus produtos em vários canais.</p>
+<p>A equipe de desenvolvimento Olist consiste em desenvolvedores que amam o que fazem. Nossos processos de desenvolvimento ágil e nossa busca pelas melhores práticas de desenvolvimento proporcionam um ótimo ambiente para profissionais que gostam de criar softwares de qualidade em boa companhia.</p>
+<p>Estamos sempre à procura de bons programadores que adorem melhorar seu trabalho. </p>
+<p>Este repositório contém um problema usado para avaliar as habilidades do candidato. É importante notar que resolver satisfatoriamente o problema é apenas uma parte do que será avaliado. Também consideramos outras disciplinas de programação como documentação, teste, cronograma de commit, design e melhores práticas de codificação.</p>
+<h5 id="dicas-">Dicas:</h5>
+<ul>
+<li>Leia atentamente a especificação para entender todos os requisitos do problema e do artefato antes de começar, se você não entender algo, diga-nos;</li>
+<li>Verifique as recomendações e o material de referência no final desta especificação;</li>
+<li>Apreciamos a simplicidade, portanto, crie uma boa configuração de projeto que nos ajudará na sua avaliação;</li>
+<li>Por favor, faça testes ... nós apreciamos testes &lt;3 ... testes tornam o mundo melhor.</li>
+</ul>
+<h5 id="como-participar">Como participar</h5>
+<ul>
+<li>Faça um fork deste repositório no Github. Se você não pode criar um fork público deste projeto, faça um repositório privado e adicione permissão de leitura para o usuário abaixo:<ul>
+<li>mgranemann</li>
+</ul>
+</li>
+<li>Siga as instruções do README.md (este arquivo);</li>
+<li>Candidate-se ao cargo na nossa página de carreiras com o link para o fork no Github.<ul>
+<li>caso ja tenha realizado a candidatura na pagina de carreiras sem o envio do desafio, responda ao e-mail que lhe foi enviado pela equipe do seleção com o link do seu repositório.</li>
+</ul>
+</li>
+</ul>
+<h5 id="especifica-o">Especificação</h5>
+<p>Você deve implementar um aplicativo para armazenar dados de produtos e categorias.</p>
+<ol>
+<li><p>Receba um CSV com as categorias e importe para o banco de dados</p>
+<p>Dado um arquivo CSV com muitas categorias, você precisa construir um comando para importar os dados para o banco de dados. O arquivo CSV terá o seguinte formato:</p>
+</li>
+</ol>
+<blockquote>
+<p>nome</p>
+<ul>
+<li>Móveis</li>
+<li>Decoração</li>
+<li>Celular </li>
+<li>Informática</li>
+<li>Brinquedos</li>
+</ul>
+</blockquote>
+<p>Cada registro de categoria no banco de dados deve ter os seguintes campos:</p>
+<ul>
+<li>id (autogerado)</li>
+<li>nome</li>
+</ul>
+<p>Você precisa armazenar os dados das categorias para complementar os dados do produto que serão armazenados posteriormente (consulte o item # 2).</p>
+<ol>
+<li>CRUD (criar, ler, atualizar e excluir) de produtos:</li>
+</ol>
+<p>Você precisa implementar estas ações:</p>
+<ul>
+<li>Criar um produto</li>
+<li>Ler os dados do produto</li>
+<li>Atualizar os dados do produto</li>
+<li>Excluir os dados do produto</li>
+</ul>
+<p>Cada registro de produto possui os campos:</p>
+<ul>
+<li>id (autogerado)</li>
+<li>nome</li>
+<li>descrição</li>
+<li>valor</li>
+<li>categorias (um produto pode estar em mais de uma categoria)</li>
+</ul>
+<p>Para recuperar um produto, podemos filtrar por 4 campos (ou uma composição desses quatro):</p>
+<ul>
+<li>nome</li>
+<li>descrição</li>
+<li>valor</li>
+<li>categorias
+Deve ser possível navegar pelos dados de todos os produtos sem nenhum filtro.</li>
+</ul>
+<p>Para criar um produto, será necessário informar os dados abaixo:</p>
+<ul>
+<li>&quot;nome&quot;: // Nome do produto;</li>
+<li>“descrição”: // Descrição do produto</li>
+<li>“valor”:// Valor do produto</li>
+<li>“categorias”:// Lista de ids de categorias</li>
+</ul>
+<h5 id="requisitos-do-projeto-">Requisitos do projeto:</h5>
+<ol>
+<li>Pode ser feita em qualquer linguagem de programação que suporte o paradigma de orientação a objetos</li>
+<li>Utilizar padrões de projeto</li>
+<li>Boas práticas de desenvolvimento de software</li>
+<li>Utilizar paradigma de orientação a objetos</li>
+<li>Utilizar GitHub</li>
+<li>Camada visual pode ser console, desktop ou web</li>
+<li>Variáveis, código e strings devem estar todos em inglês.</li>
+<li>Escreva a documentação do projeto contendo:</li>
+</ol>
+<blockquote>
+<ul>
+<li>Descrição;</li>
+<li>Instruções de instalação (configuração) e teste;</li>
+<li>Breve descrição do ambiente de trabalho utilizado para executar este projeto (Computador / sistema operacional, editor de texto / IDE, bibliotecas, etc).</li>
+<li>Variáveis, código e strings devem estar todos em inglês.</li>
+</ul>
+</blockquote>
+<h5 id="recomenda-es">Recomendações</h5>
+<ul>
+<li>Escreva testes! Por favor, faça testes ... nós apreciamos testes &lt;3 ... testes tornam o mundo melhor;</li>
+<li>Use boas práticas de programação;</li>
+<li>Use as melhores práticas do git, com mensagens claras;</li>
+<li>Esteja ciente ao modelar o banco de dados;</li>
+</ul>
+<h5 id="divirta-se-">Divirta-se!</h5>
+
 {% endblock%}

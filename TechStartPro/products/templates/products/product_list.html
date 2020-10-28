@@ -2,8 +2,17 @@
 
 {% block content %}
 
-  <ul class="collection with-header">
-    <li class="collection-header"><h4>List of Products</h4></li>
+<form method="get">
+  <ul>
+    {{ filter.form.as_ul }}
+  </ul>
+  <button type="submit">Search</button>
+</form>
+
+<ul class="collection with-header">
+  <li class="collection-header">
+    <h4>List of Products</h4>
+  </li>
 
   {% for product, categories in product_list %}
   <li class="collection-item">
@@ -26,5 +35,5 @@
     </div>
   </li>
   {% endfor %}
-  </ul>
+</ul>
 {% endblock %}

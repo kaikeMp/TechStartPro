@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+
+h1#logo-brand {
+  font-family: 'Lato';
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+body{
+  font-family: 'Roboto';
+}
+
+div#my-navbar{
+  text-align:right;
+  margin-top:0;
+  font-size:1.5em;
+}
+.btn-large{
+  font-family: 'Lato';
+  font-size:1.5em;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
+
+a:visited{ color:#1C2833 ; }
+div #my-navbar a:link{ color:#1C2833  ; }
+div #my-navbar a:hover{ text-decoration: underline; }
+
+p {
+  text-indent: 1.5em;
+}
+
+td{
+  text-align:center;
+}

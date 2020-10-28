@@ -1,0 +1,20 @@
+{% include 'products/head.html' %}
+
+<body>
+  <div class="container">
+    {% include 'products/header.html' %}
+
+    <div class="row">
+      <div class="col l8 m12 s12">
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('select').formSelect();
+});
+
+</script>

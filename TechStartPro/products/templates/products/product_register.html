@@ -1,0 +1,23 @@
+{% extends 'products/general.html' %}
+
+{% block content %}
+  <h4>Register New Product</h4>
+  <div class="col l6 m8 s12">
+    <form action="{% url 'product_register' %}" method='POST'>
+      {% csrf_token %}
+      <ul>
+        {{ form.as_ul }}
+      </ul>
+      <input id='create-product-btn' type="submit" value='Submit' class='btn blue darken-1'>
+    </form>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $( "#create-product-btn" ).click(function() {
+      alert('Product Created!');
+    });
+  })
+
+  </script>
+
+{% endblock %}

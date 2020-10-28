@@ -1,0 +1,22 @@
+{% extends 'products/general.html' %}
+
+{% block content %}
+  <h4>Load a Categories .csv File</h4>
+  <div class="col l6 m8 s12">
+    <form action="{% url 'load_categories' %}" method='POST'  enctype="multipart/form-data">
+      {% csrf_token %}
+      <ul>
+        {{ form.as_ul }}
+      </ul>
+      <input type="submit" value='Submit' class='btn blue darken-1'>
+
+    </form>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $( "#create-product-btn" ).click(function() {
+      alert('Categories Loaded!');
+    });
+  })
+  </script>
+{% endblock %}

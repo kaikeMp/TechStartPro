@@ -7,8 +7,6 @@ from django.views import generic
 from .forms import ProductRegisterForm, LoadCategoriesForm
 from .models import Product, Category
 from .filters import ProductFilter
-import pandas as pd
-
 import csv
 from io import StringIO
 
@@ -43,18 +41,11 @@ def product_detail(request, product_id):
         }
         return HttpResponse(template.render(context, request))
 
-def reports(request):
-    return HttpResponse('Here you can see the reports')
-
-class DataReportView(generic.ListView):
-    model = Product
-    template_name = 'products/data_report.html'
-
 def product_register(request):
     if request.method == 'POST':
         form = ProductRegisterForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data.get('name')
+            name = form.cleaned_data.get('na beer.salas_set.filter(pk=sala.pk)me')
             description = form.cleaned_data.get("description")
             value = form.cleaned_data.get("value")
             categories = Category.objects.filter(name__in=form.cleaned_data['category'])
@@ -112,6 +103,7 @@ def category_load(request):
             csv_data = csv.reader(StringIO(file), delimiter=',')
             csv_data = list(csv_data)
             csv_data = [csv_data[i][0] for i in range(1, len(csv_data))]
+
             for category_name in csv_data:
                 category = Category(name=category_name)
                 category.save()

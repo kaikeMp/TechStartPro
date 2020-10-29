@@ -27,13 +27,13 @@
 <!-- edit button -->
 <div class="row grey lighten-3" style="padding:1em; margin-bottom:0;">
   <div class="col l3" style="padding:0;">
-    <a class="waves-effect waves-light btn-large" style='background-color: #0c29d0; width:100%;' href="{% url 'product_update' product.id %}">
+    <a class="waves-effect waves-light btn" style=' width:100%;' href="{% url 'product_update' product.id %}">
       <i class="material-icons right">edit</i>edit
     </a>
   </div>
   <!-- delete button -->
-  <div class="col l3">
-    <a id="delete-btn" class="waves-effect waves-light btn-large" style='background-color: #0c29d0; width:100%;'>
+  <div class="col l3 text-white">
+    <a id="delete-btn" class="waves-effect waves-light btn" style='width:100%;'>
       <i class="material-icons right">delete</i>delete
     </a>
   </div>
@@ -43,14 +43,14 @@
   <div class="col l3" style="padding:0;">
     <form action="{% url 'product_detail' product.id%}" method='POST'>
       {% csrf_token %}
-      <button name="delete-forever-btn" type='submit' id='delete-forever-btn'class="red darken-2 waves-effect waves-light btn-large" style="width:100%;"><i class="medium material-icons right">delete_forever</i>Yes, Delete!
+      <button name="delete-forever-btn" type='submit' id='delete-forever-btn'class="red darken-2 waves-effect waves-light btn" style="width:100%;"><i class="medium material-icons right">delete_forever</i>Yes, Delete!
       </a>
       </button>
     </form>
   </div>
   <!-- keep button -->
   <div class="col l3">
-    <a id="cancel-delete-btn" class="green darken-1 waves-effect waves-light btn-large" style="width:100%;">
+    <a id="cancel-delete-btn" class="green darken-1 waves-effect waves-light btn" style="width:100%;">
       <i class="material-icons right">keyboard_arrow_up</i>No, keep it.
     </a>
   </div>

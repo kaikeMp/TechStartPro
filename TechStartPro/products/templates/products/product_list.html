@@ -6,7 +6,7 @@
   <ul>
     {{ filter.form.as_ul }}
   </ul>
-  <button type="submit">Search</button>
+  <button type="submit" class="btn">Search</button>
 </form>
 
 <ul class="collection with-header">
@@ -18,8 +18,8 @@
   <li class="collection-item">
     <div>
       <b>Name:</b> {{ product.name }} (R$ {{product.value}})
-      <a href="{% url 'product_detail' product.id %}" class="secondary-content">
-        <i class="material-icons medium">
+      <a href="{% url 'product_detail' product.id %}" class="secondary-content olist-indigo">
+        <i class="material-icons medium list-arrow">
           keyboard_arrow_right
         </i>
       </a>

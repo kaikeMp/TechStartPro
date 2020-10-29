@@ -22,10 +22,20 @@ div#my-navbar{
   text-transform: lowercase;
 }
 
-
-a:visited{ color:#1C2833 ; }
+#logo-brand{ color: #0c29d0; }
+#my-navbar a:visited{ color:#1C2833 ; }
 div #my-navbar a:link{ color:#1C2833  ; }
 div #my-navbar a:hover{ text-decoration: underline; }
+
+.btn {
+  background-color: #0c29d0;
+}
+.list-arrow{
+  color: #0c29d0;
+}
+a .btn{
+  color: white !important;
+}
 
 p {
   text-indent: 1.5em;

@@ -45,7 +45,7 @@ def product_register(request):
     if request.method == 'POST':
         form = ProductRegisterForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data.get('na beer.salas_set.filter(pk=sala.pk)me')
+            name = form.cleaned_data.get('name')
             description = form.cleaned_data.get("description")
             value = form.cleaned_data.get("value")
             categories = Category.objects.filter(name__in=form.cleaned_data['category'])

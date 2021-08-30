@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>images/chromedriver.png</file>
+  </qresource>
+  <qresource prefix="close_popup">
+    <file>images/cil-x.png</file>
+  </qresource>
+</RCC>
